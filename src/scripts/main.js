@@ -6,11 +6,16 @@
 	}
 
 	var displayData = function(data){
-		var title = document.getElementById("title");
-		var stars = document.getElementById("stars");
-		title.innerHTML = data[0].Title;
+		var all_stars = document.getElementById("all-stars");
 
-		stars.innerHTML = getStars(data[0].Rating);
+		var html = ""
+		for (var i in data) {
+			html = html.concat("<div class='rating'><h2>" +  data[i].Title + "</h2>");
+			html = html.concat(getStars(data[i].Rating));
+			html = html.concat("</div>");
+		}
+
+		all_stars.innerHTML = html;
 	}
 
 	var getStars = function(rating){
@@ -28,6 +33,6 @@
 	}
 
 	//getData();
-	var data = [{Rating:3, Title: "Donald Trump"}];
+	var data = [{Rating:3, Title: "Donald Trump"}, {Rating:5, Title: "Påskägg"}];
 	displayData(data);
 })();
