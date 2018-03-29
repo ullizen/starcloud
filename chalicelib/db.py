@@ -1,6 +1,7 @@
 import uuid
 import boto3
 from boto3.dynamodb.conditions import Key
+from time import gmtime, strftime
 
 def connect_to_db():
 	dynamodb = boto3.resource('dynamodb') #This is how one connects to a resource
@@ -17,3 +18,16 @@ def get_all():
 	result = all_items['Items']
 	
 	return result
+
+def post_item(data):
+
+	get_table().put_item(
+		Item={
+			'UUID': str(uuid.uuid1()),
+			'Title': data['Title'],
+			'Rating': data['Rating'],
+			'Date': strftime("%Y-%m-%d %H:%M:%S", gmtime())
+		}
+	)
+
+	return "post_item"
