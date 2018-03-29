@@ -17,7 +17,7 @@ cors_config = CORSConfig(
 def get_items():
     return request_handler.handle_get_all()
 
-@app.route('/starcloud', methods=['POST'], cors=cors_config)
+@app.route('/starcloud', methods=['POST'], content_types=['application/json'], cors=cors_config)
 def post_item():
     data = app.current_request.json_body
 	
