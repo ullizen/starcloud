@@ -6,10 +6,28 @@
 	}
 
 	var displayData = function(data){
-		console.log(data);
-		var name = document.getElementById("title");
-		name.innerHTML = data[0].Title;
+		var title = document.getElementById("title");
+		var stars = document.getElementById("stars");
+		title.innerHTML = data[0].Title;
+
+		stars.innerHTML = getStars(data[0].Rating);
 	}
 
-	getData();
+	var getStars = function(rating){
+		var stars = "<i class='star fa fa-star' aria-hidden='true'></i>";
+
+		stars = stars.repeat(rating);
+
+		var emptystar = "<i class='star fa fa-star-o' aria-hidden='true'></i>";
+
+		var emptystars = emptystar.repeat(5 - rating);
+
+		stars = stars.concat(emptystars);
+
+		return stars;
+	}
+
+	//getData();
+	var data = [{Rating:3, Title: "Donald Trump"}];
+	displayData(data);
 })();
