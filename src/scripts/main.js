@@ -32,7 +32,7 @@
 		return stars;
 	}
 
-	//getData();
-	var data = [{Rating:3, Title: "Donald Trump"}, {Rating:5, Title: "Påskägg"}];
-	displayData(data);
+	getData();
+	//var data = [{Rating:3, Title: "Donald Trump"}, {Rating:5, Title: "Påskägg"}];
+	//displayData(data);
 })();
