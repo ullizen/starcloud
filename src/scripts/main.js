@@ -23,7 +23,7 @@
 
 		stars = stars.repeat(rating);
 
-		var emptystar = "<i class='star fa fa-star-o' aria-hidden='true'></i>";
+		var emptystar = "<i class='star-empty fa fa-star' aria-hidden='true'></i>";
 
 		var emptystars = emptystar.repeat(5 - rating);
 
