@@ -20,6 +20,7 @@ def get_items():
 @app.route('/starcloud', methods=['POST'], content_types=['application/json'], cors=cors_config)
 def post_item():
     data = app.current_request.json_body
+    print(data)
 	
     if data is None:
         return "RAISE SOME ERROR"
