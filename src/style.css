@@ -3,6 +3,7 @@
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
+	background: #fdfdfd;
 }
 
 .stars {
@@ -19,11 +20,13 @@ h2 {
 .star {
 	color: #edb210;
 	text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .star-empty {
 	color: #eee;
 	text-shadow: 0 -1px 0px rgba(0,0,0,0.15);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .header {
@@ -59,7 +62,6 @@ h2 {
 	padding: 20px;
 	max-width: 500px;
 	margin: auto;
-	background: #fdfdfd;
 }
 
 .rating {
@@ -85,20 +87,43 @@ input {
 	margin-bottom: 10px;
 	border-radius: 3px;
 	border: 1px solid #ddd;
+	text-align: center;
+	font-weight: bold;
 }
 
 button {
 	border: none;
-	border-radius: 3px;
+	border-radius: 5px;
 	background: #c34848;
 	font-weight: 300;
 	color: white;
-	padding: 10px;
+	padding: 10px 30px;
 	font-size: 24px;
 	font-family: inherit;
-	border-bottom: 1px solid #9e3636;
+	border-bottom: 5px solid #9e3636;
+	align-self: flex-start;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+button:active {
+	border-bottom: none;
+	margin-top: 5px;
 }
 
 .star-input {
 	cursor: pointer;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.star-input .star:hover {
+	opacity: 0.7;
+}
+
+.star-input .star-empty:hover {
+	opacity: 0.7;
+	/*color: #edb210;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.25);*/
 }

@@ -15,14 +15,14 @@
 
 	<main class="main">
 		<form class="form" id="postForm" action="https://7fw1rdpqua.execute-api.eu-west-1.amazonaws.com/api/starcloud" method="post">
-			<input name="Title" type="text" placeholder="title">
-			<input name="Rating" type="number" min="0" max="5" placeholder="rating">
+			<input name="Title" type="text"  maxlength="30">
+			<input id="rating" name="Rating" type="hidden">
 			<div class="star-input">
-				<i id="star-1" class='star-empty fa fa-star' aria-hidden='true'></i>
-				<i id="star-2" class='star-empty fa fa-star' aria-hidden='true'></i>
-				<i id="star-3" class='star-empty fa fa-star' aria-hidden='true'></i>
-				<i id="star-4" class='star-empty fa fa-star' aria-hidden='true'></i>
-				<i id="star-5" class='star-empty fa fa-star' aria-hidden='true'></i>
+				<i data-value="1" class='star-empty fa fa-star' aria-hidden='true'></i>
+				<i data-value="2" class='star-empty fa fa-star' aria-hidden='true'></i>
+				<i data-value="3" class='star-empty fa fa-star' aria-hidden='true'></i>
+				<i data-value="4" class='star-empty fa fa-star' aria-hidden='true'></i>
+				<i data-value="5" class='star-empty fa fa-star' aria-hidden='true'></i>
 			</div>
 			<button id="postButton" type="submit">Rate</button>
 		</form>
