@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -13,10 +14,9 @@
 	</header>
 
 	<main class="main">
-		<form class="form" action="https://7fw1rdpqua.execute-api.eu-west-1.amazonaws.com/api/starcloud" method="post">
-			<input name="title" type="text" placeholder="title">
-			<input name="rating" type="number" min="0" max="5" placeholder="rating">
-
+		<form class="form" id="postForm" action="https://7fw1rdpqua.execute-api.eu-west-1.amazonaws.com/api/starcloud" method="post">
+			<input name="Title" type="text" placeholder="title">
+			<input name="Rating" type="number" min="0" max="5" placeholder="rating">
 			<div class="star-input">
 				<i id="star-1" class='star-empty fa fa-star' aria-hidden='true'></i>
 				<i id="star-2" class='star-empty fa fa-star' aria-hidden='true'></i>
@@ -24,8 +24,7 @@
 				<i id="star-4" class='star-empty fa fa-star' aria-hidden='true'></i>
 				<i id="star-5" class='star-empty fa fa-star' aria-hidden='true'></i>
 			</div>
-
-			<button type="submit">Rate</button>
+			<button id="postButton" type="submit">Rate</button>
 		</form>
 
 		<div id="all-stars" class="stars">
@@ -36,6 +35,7 @@
 
 <script src="scripts/main.js"></script>
 <script src="scripts/starRating.js"></script>
+<script src="send_data.js"></script>
 
 </body>
 </html>
