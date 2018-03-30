@@ -25,4 +25,4 @@ def post_item():
     if data is None:
         return "RAISE SOME ERROR"
 
-    return data#request_handler.handle_post_item(data)
+    return request_handler.handle_post_item(data)
