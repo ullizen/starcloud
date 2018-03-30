@@ -24,14 +24,14 @@ def get_all():
 
 def post_item(data):
 
-	if(validate.validate_subject(data['Title'])):
+	if(validate.validate_subject(data['title'])):
 
 		get_table().put_item(
 			Item={
 				'UUID': str(uuid.uuid1()),
-				'Title': data['Title'],
-				'Rating': data['Rating'],
-				'Date': strftime("%Y-%m-%d %H:%M:%S", gmtime())
+				'title': data['Title'],
+				'rating': data['Rating'],
+				'date': strftime("%Y-%m-%d %H:%M:%S", gmtime())
 			}
 		)
 
