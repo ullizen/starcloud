@@ -29,8 +29,8 @@ def post_item(data):
 		get_table().put_item(
 			Item={
 				'UUID': str(uuid.uuid1()),
-				'title': data['Title'],
-				'rating': data['Rating'],
+				'title': data['title'],
+				'rating': data['rating'],
 				'date': strftime("%Y-%m-%d %H:%M:%S", gmtime())
 			}
 		)
