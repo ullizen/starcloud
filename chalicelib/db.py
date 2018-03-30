@@ -35,6 +35,6 @@ def post_item(data):
 			}
 		)
 
-		return "posted"
+		return {"status":"posted"}
 	
-	return "did not post"
+	return {"status":"did not post"}

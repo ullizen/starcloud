@@ -15,6 +15,7 @@ $.fn.serializeObject = function(){
             object[this.name] = this.value || '';
         }
     });
+
     return object;
 };
 
@@ -28,11 +29,12 @@ $.fn.serializeObject = function(){
             data: formData,
             contentType: "application/json",
             success: function(){  
+                location.reload();
                 //$("form#updatejob").hide(function(){$("div.success").fadeIn();});  
             },
             error: function(xhr, textStatus, errorThrown) { 
-                //alert(xhr)
-                //alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                alert(xhr)
+                alert("Status: " + textStatus); alert("Error: " + errorThrown); 
             }    
         });
         return false;

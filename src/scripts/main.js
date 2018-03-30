@@ -6,6 +6,7 @@
 	}
 
 	var displayData = function(data){
+		data = data.sort(sortByDate);
 		var all_stars = document.getElementById("all-stars");
 
 		var html = ""
@@ -30,6 +31,10 @@
 		stars = stars.concat(emptystars);
 
 		return stars;
+	}
+
+	function sortByDate(a, b) {
+    	return new Date(b.date).getTime() - new Date(a.date).getTime();
 	}
 
 	getData();
