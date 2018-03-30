@@ -10,8 +10,8 @@
 
 		var html = ""
 		for (var i in data) {
-			html = html.concat("<div class='rating'><h2>" +  data[i].Title + "</h2>");
-			html = html.concat(getStars(data[i].Rating));
+			html = html.concat("<div class='rating'><h2>" +  data[i].title + "</h2>");
+			html = html.concat(getStars(data[i].rating));
 			html = html.concat("</div>");
 		}
 
@@ -33,6 +33,4 @@
 	}
 
 	getData();
-	//var data = [{Rating:3, Title: "Donald Trump"}, {Rating:5, Title: "Påskägg"}];
-	//displayData(data);
 })();

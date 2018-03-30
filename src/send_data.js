@@ -19,22 +19,19 @@ $.fn.serializeObject = function(){
 };
 
 (function(){
-    console.log("inne")
     $("#postButton").click(function(){
         var formData = JSON.stringify($('#postForm').serializeObject());
 
-        alert(formData);
         $.ajax({
             type: "POST",
             url: "https://7fw1rdpqua.execute-api.eu-west-1.amazonaws.com/api/starcloud",
             data: formData,
             contentType: "application/json",
             success: function(){  
-                alert()
                 //$("form#updatejob").hide(function(){$("div.success").fadeIn();});  
             },
             error: function(xhr, textStatus, errorThrown) { 
-                alert(xhr)
+                //alert(xhr)
                 //alert("Status: " + textStatus); alert("Error: " + errorThrown); 
             }    
         });

@@ -15,8 +15,8 @@
 
 	<main class="main">
 		<form class="form" id="postForm" action="https://7fw1rdpqua.execute-api.eu-west-1.amazonaws.com/api/starcloud" method="post">
-			<input name="Title" type="text"  maxlength="30">
-			<input id="rating" name="Rating" type="hidden">
+			<input name="title" type="text"  maxlength="30">
+			<input id="rating" name="rating" type="hidden">
 			<div class="star-input">
 				<i data-value="1" class='star-empty fa fa-star' aria-hidden='true'></i>
 				<i data-value="2" class='star-empty fa fa-star' aria-hidden='true'></i>
@@ -28,7 +28,9 @@
 		</form>
 
 		<div id="all-stars" class="stars">
-			no data to show
+			<div class="loader">
+				<i data-value="1" class='star fa fa-star' aria-hidden='true'></i>
+			</div>
 		</div>
 	</main>
 	
